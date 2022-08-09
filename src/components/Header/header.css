@@ -1,0 +1,52 @@
+.header {
+  max-width: 100vw;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #073042;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+}
+
+.header__logo {
+width: 38px;
+height: 38px;
+transition: opacity .5s;
+}
+
+.header__logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  width: 173px;
+  align-items: center;
+}
+
+.header__link {
+color: #FFFFFF;
+font-size: 12px;
+line-height: 16px;
+}
+
+.header__button {
+color: #000000;
+font-size: 12px;
+line-height: 16px;
+background-color: #2BE080;
+border-radius: 3px;
+cursor: pointer;
+transition: opacity 0.5s;
+border: none;
+margin-left: 30px;
+width: 76px;
+height: 32px;
+}
+
+.header__button:hover{
+  opacity: 0.6;
+  }

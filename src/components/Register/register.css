@@ -1,0 +1,77 @@
+.register__container{
+max-width: 396px;
+display: flex;
+flex-direction: column;
+margin: 70px auto;
+}
+.register__logo{
+width: 38px;
+height: 38px;
+}
+
+.register__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.register__greeting{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+color: #000000;
+margin: 40px auto;
+}
+
+.register__label{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+color: #A0A0A0;
+text-align: left;
+margin-bottom: 10px;
+}
+
+.register__input{
+background: #F9F9F9;
+border-radius: 8px;
+height: 46px;
+border: none;
+margin-bottom: 20px;
+}
+.register__input:last-child{
+  margin-bottom: 0;
+}
+
+.register__button{
+  margin-top: 69px;
+  background: #3456F3;
+  border-radius: 3px;
+  border: none;
+  height: 45px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.register__link{
+  margin-top: 16px;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #3456F3;
+}
+
+.register__question{
+  color: #A0A0A0;
+  margin-right: 6px;
+}
