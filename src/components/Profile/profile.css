@@ -1,0 +1,67 @@
+.profile__container{
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  margin: 74px auto 70px;
+  }
+
+  .profile__greeting{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 123px;
+  }
+
+.profile__line{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+
+  }
+.profile__line:first-child{
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E8E8E8;
+  margin-top: 0;
+  }
+
+.profile__caption{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+color: #000000;
+}
+
+.profile__content{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 13px;
+text-align: right;
+color: #000000;
+}
+
+.profile__redact{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+color: #000000;
+margin-top: 220px;
+}
+
+.profile__exit{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+color: #FF3055;
+margin-top: 16px;
+}
