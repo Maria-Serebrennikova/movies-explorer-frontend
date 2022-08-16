@@ -1,11 +1,12 @@
 import React from "react";
 import logo from "../../images/logo.svg";
 import "../Register/register.css";
+import { Link } from 'react-router-dom';
 
 function Register(props) {
   return (
     <section className="register__container">
-      <img className="register__logo" src={logo} alt="Логотип" />
+      <Link to="/" className="register__logo-center"><img className="register__logo" src={logo} alt="Логотип" /></Link>
       <h2 className="register__greeting">Добро пожаловать!</h2>
       <form className="register__form">
         <label className="register__label">Имя</label>
@@ -16,12 +17,12 @@ function Register(props) {
         <input className="register__input"></input>
         <span className="register__error"></span>
         <button type="submit" className="register__button">
-          Войти
+        Зарегистрироваться
         </button>
-        <p className="register__link">
+        <Link to="/signup"className="register__link">
           <span className="register__question">Уже зарегистрированы?</span>
           Войти
-        </p>
+        </Link>
       </form>
     </section>
   );

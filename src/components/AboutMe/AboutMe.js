@@ -8,6 +8,7 @@ function AboutMe(props) {
       <h2 className="aboutMe__title">Студент</h2>
 
       <div className="aboutMe__container">
+        <div className="aboutMe__info">
         <h3 className="aboutMe__subtitle">Мария</h3>
         <h4 className="aboutMe__profession">Фронтенд-разработчик, 36 лет</h4>
         <p className="aboutMe__text">
@@ -32,6 +33,7 @@ function AboutMe(props) {
         >
           Github
         </a>
+        </div>
         <img className="aboutMe__photo" src={photo} alt="Фото Марии" />
       </div>
     </section>

@@ -1,67 +1,96 @@
-.profile__container{
+.profile__container {
   max-width: 410px;
   display: flex;
   flex-direction: column;
   margin: 74px auto 70px;
-  }
+}
 
-  .profile__greeting{
-  font-family: 'Inter';
+.profile__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__greeting {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
   margin-bottom: 123px;
-  }
+  align-self: center;
+}
 
-.profile__line{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 17px;
-
-  }
-.profile__line:first-child{
+.profile__line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+.profile__line:first-child {
   padding-bottom: 16px;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   margin-top: 0;
+}
+
+.profile__caption {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+
+.profile__content {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: #000000;
+  border: none;
+}
+
+.profile__redact {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  margin-top: 220px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.profile__exit {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ff3055;
+  margin-top: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 1279px) {
+  .profile__container {
+    margin: 236px auto 269px;
   }
-
-.profile__caption{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 13px;
-color: #000000;
+  .profile__greeting {
+    margin-bottom: 96px;
+  }
 }
-
-.profile__content{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 13px;
-text-align: right;
-color: #000000;
-}
-
-.profile__redact{
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-color: #000000;
-margin-top: 220px;
-}
-
-.profile__exit{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-color: #FF3055;
-margin-top: 16px;
+@media (max-width: 767px) {
+  .profile__container {
+    margin: 70px 30px 40px;
+  }
+  .profile__redact {
+  margin-top: 379px;
+  }
 }

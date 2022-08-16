@@ -6,15 +6,15 @@ function Promo(props) {
   return (
     <section className="promo">
       <div className="promo__container">
+      <div className="promo__text">
         <div className="promo__title">
           Учебный проект студента факультета Веб-разработки.
         </div>
         <div className="promo__subtitle">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </div>
-        <button className="promo__button" type="button">
-          Узнать больше
-        </button>
+        <a href="to-learn-more" className="promo__button">Узнать больше</a>
+        </div>
         <img
           className="promo__image"
           src={promoImage}

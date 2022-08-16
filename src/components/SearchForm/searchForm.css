@@ -1,40 +1,41 @@
-.searchForm{
+.searchForm {
   padding: 70px 70px 47px;
 }
 
-.searchForm__main-string{
+.searchForm__main-string {
   display: flex;
   justify-content: space-between;
   padding-bottom: 13px;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.searchForm__input{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 28px;
-line-height: 34px;
-border: none;
+.searchForm__input {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  border: none;
+  padding: 0;
 }
 
-.searchForm__button{
-background: #3456F3;
-border-radius: 48px;
-width: 80px;
-height: 34px;
-border: none;
-background-image: url('../../images/search.svg');
-background-position: center;
-background-repeat: no-repeat;
+.searchForm__button {
+  background: #3456f3;
+  border-radius: 48px;
+  width: 80px;
+  height: 34px;
+  border: none;
+  background-image: url("../../images/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.searchForm__switch-line{
+.searchForm__switch-line {
   display: flex;
   align-items: center;
   gap: 14px;
   padding-top: 33px;
- }
+}
 
 .searchForm__switch {
   position: relative;
@@ -53,9 +54,9 @@ background-repeat: no-repeat;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #EBEBEB;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #ebebeb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .searchForm__switch-slider:before {
@@ -65,18 +66,18 @@ background-repeat: no-repeat;
   width: 14px;
   left: 2px;
   bottom: 2px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border: 1px solid #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.searchForm__switch-input:checked+.searchForm__switch-slider {
-  background-color: #2BE080;
+.searchForm__switch-input:checked + .searchForm__switch-slider {
+  background-color: #2be080;
 }
 
-.searchForm__switch-input:checked+.searchForm__switch-slider:before {
-  background-color: #FFFFFF;
+.searchForm__switch-input:checked + .searchForm__switch-slider:before {
+  background-color: #ffffff;
   -webkit-transform: translateX(14px);
   -ms-transform: translateX(14px);
   transform: translateX(14px);
@@ -91,10 +92,35 @@ background-repeat: no-repeat;
 }
 
 .searchForm__switch-text {
-  font-family: 'Inter', 'Arial', sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
+}
+
+@media (max-width: 1279px) {
+  .searchForm {
+    padding: 80px 30px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .searchForm {
+    padding: 90px 14px 50px;
+  }
+  .searchForm__input {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 202px;
+  }
+  .searchForm__switch-text {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .searchForm__switch-line {
+    justify-content: center;
+    padding-top: 40px;
+  }
 }

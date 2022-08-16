@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../../images/logo.svg";
 import "../Login/login.css";
+import { Link } from 'react-router-dom';
 
 
 function Login(props) {
   return (
     <section className="login__container">
-      <img className="login__logo" src={logo} alt="Логотип" />
+      <Link to="/" className="login__logo-center"><img className="login__logo" src={logo} alt="Логотип" /></Link>
       <h2 className="login__greeting">Рады видеть!</h2>
       <form className="login__form">
         <label className="login__label">E-mail</label>
@@ -17,10 +18,10 @@ function Login(props) {
         <button type="submit" className="login__button">
           Войти
         </button>
-        <p className="login__link">
+        <Link to = "/signin" className="login__link">
           <span className="login__question">Ещё не зарегистрированы?</span>
           Регистрация
-        </p>
+        </Link>
       </form>
     </section>
   );

@@ -3,6 +3,8 @@
   padding: 75px 70px 75px;
   background-color: #073042;
   max-height: 524px;
+  font-family: 'Inter';
+font-style: normal;
 }
 
 .promo__container{
@@ -13,8 +15,6 @@ flex-wrap: wrap;
 }
 
 .promo__title {
-font-family: 'Inter';
-font-style: normal;
 font-weight: 400;
 font-size: 50px;
 line-height: 1.16;
@@ -25,8 +25,6 @@ margin-bottom: 36px;
 }
 
 .promo__subtitle{
-font-family: 'Inter';
-font-style: normal;
 font-weight: 400;
 font-size: 13px;
 line-height: 16px;
@@ -36,8 +34,6 @@ opacity: 0.5;
 }
 
 .promo__button{
-font-family: 'Inter';
-font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: 16px;
@@ -50,6 +46,10 @@ height: 36px;
 margin-top: 146px;
 margin-left: 0;
 transition: opacity .5s;
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .promo__button:hover{
@@ -61,4 +61,49 @@ transition: opacity .5s;
   max-width: 310px;
   height: 304px;
   align-self: flex-end;
+}
+
+@media(max-width: 1279px) {
+.promo{
+  max-height: 784px;
+  padding: 140px 44px 76px;
+}
+.promo__container{
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  max-height: 784px;
+  }
+.promo__image {
+  align-self: center;
+}
+.promo__title {
+font-size: 40px;
+line-height: 50px;
+text-align: center;
+margin: 48px auto 22px;
+max-width: 100%;
+}
+.promo__subtitle{
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+}
+.promo__button{
+  margin: 102px auto 0;
+}
+}
+
+@media (max-width: 767px) {
+  .promo{
+    /* max-height: 784px; */
+    padding: 70px 10px 30px;
+}
+.promo__image {
+  max-width: 210px;
+  height: 206px;
+}
+.promo__title {
+font-size: 30px;
+line-height: 38px;
+}
 }
