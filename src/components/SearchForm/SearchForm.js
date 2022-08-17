@@ -10,6 +10,7 @@ function SearchForm(props) {
           placeholder="Фильм"
           minLength="2"
           maxLength="30"
+          required
         ></input>
         <button type="submit" className="searchForm__button"></button>
       </div>

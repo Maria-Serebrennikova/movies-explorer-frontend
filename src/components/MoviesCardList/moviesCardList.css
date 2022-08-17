@@ -45,9 +45,6 @@
   flex-direction: column;
   align-items: center;
 }
-.moviesCardList__else{
-  display: none;
-}
 }
 @media (max-width: 767px) {
   .moviesCardList__grid {

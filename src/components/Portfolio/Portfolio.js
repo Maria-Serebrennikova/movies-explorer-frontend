@@ -1,6 +1,6 @@
 import React from "react";
 import "../Portfolio/portfolio.css";
-import arrow from "../../images/arrow.svg";
+// import arrow from "../../images/arrow.svg";
 
 function Portfolio(props) {
   return (
@@ -10,15 +10,12 @@ function Portfolio(props) {
       <ul className="portfolio__list">
         <li className="portfolio__element">
         <a className="portfolio__link" href="https://github.com/Maria-Serebrennikova/how-to-learn" target="blank" >Статичный сайт</a>
-        <img className="portfolio__arrow" src={arrow} alt="Стрелка" />
         </li>
         <li className="portfolio__element">
         <a className="portfolio__link" href="https://github.com/Maria-Serebrennikova/russian-travel" target="blank" >Адаптивный сайт</a>
-        <img className="portfolio__arrow" src={arrow} alt="Стрелка" />
         </li>
         <li className="portfolio__element">
         <a className="portfolio__link" href="https://github.com/Maria-Serebrennikova/react-mesto-api-full" target="blank" >Одностраничное приложение</a>
-        <img className="portfolio__arrow" src={arrow} alt="Стрелка" />
         </li>
       </ul>
      </section>

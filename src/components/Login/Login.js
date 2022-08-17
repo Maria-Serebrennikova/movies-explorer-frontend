@@ -18,7 +18,7 @@ function Login(props) {
         <button type="submit" className="login__button">
           Войти
         </button>
-        <Link to = "/signin" className="login__link">
+        <Link to = "/signup" className="login__link">
           <span className="login__question">Ещё не зарегистрированы?</span>
           Регистрация
         </Link>

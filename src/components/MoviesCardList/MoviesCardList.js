@@ -80,12 +80,7 @@ function MoviesCardList(props) {
           duration={"1ч 47м"}
         />
       </div>
-      <div className="moviesCardList__else">
-      <button className="moviesCardList__button" type="button">
-         Ещё
-        </button>
-      </div>
-    </section>
+          </section>
   );
 }
 

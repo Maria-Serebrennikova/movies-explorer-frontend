@@ -19,7 +19,7 @@ function Register(props) {
         <button type="submit" className="register__button">
         Зарегистрироваться
         </button>
-        <Link to="/signup"className="register__link">
+        <Link to="/signin"className="register__link">
           <span className="register__question">Уже зарегистрированы?</span>
           Войти
         </Link>

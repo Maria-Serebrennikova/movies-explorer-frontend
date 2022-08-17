@@ -1,3 +1,5 @@
+// !Чтобы просмотреть состояние залогиненного хедера, раскомментируйте пжл строки 12 и 17, а строки 13 и 18 - закомментируйте.
+
 import React from "react";
 import logo from "../../images/logo.svg";
 import ExitHeader from "../ExitHeader/ExitHeader";
@@ -12,8 +14,7 @@ function Header({ isLoggedIn }) {
       <Link to="/">
         <img className="header__logo" src={logo} alt="Логотип" />
       </Link>
-      {/* <Navigation/>
-      <ExitHeader /> */}
+      {/* <Navigation/> */}
       {isLoggedIn ? <Navigation /> : <ExitHeader />}
     </header>
   );

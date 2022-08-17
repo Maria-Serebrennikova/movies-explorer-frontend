@@ -28,7 +28,11 @@
   background-image: url("../../images/search.svg");
   background-position: center;
   background-repeat: no-repeat;
+  transition: opasity .5s;
 }
+.searchForm__button:hover{
+  opacity: 0.6;
+  }
 
 .searchForm__switch-line {
   display: flex;
