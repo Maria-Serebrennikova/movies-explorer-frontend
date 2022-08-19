@@ -1,0 +1,106 @@
+.login__container {
+  max-width: 396px;
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+  font-family: "Inter";
+  font-style: normal;
+}
+.login__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__greeting {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 40px auto;
+}
+
+.login__label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #a0a0a0;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.login__input {
+  background: #f9f9f9;
+  border-radius: 8px;
+  height: 46px;
+  border: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+.login__input:last-child {
+  margin-bottom: 0;
+}
+
+.login__button {
+  margin-top: 179px;
+  background: #3456f3;
+  border-radius: 3px;
+  border: none;
+  height: 45px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.login__link {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3456f3;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login__question {
+  color: #a0a0a0;
+  margin-right: 5px;
+}
+
+@media (max-width: 1279px) {
+  .login__container {
+    margin: 232px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .login__container {
+    margin: 56px 30px 30px;
+  }
+  .login__logo-center {
+    align-self: center;
+  }
+  .login__greeting {
+    margin: 50px auto 80px;
+  }
+  .login__label {
+    margin-bottom: 10px;
+  }
+  .login__link {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 14px;
+  }
+  .login__button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
