@@ -64,6 +64,14 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  transition: opacity .5s;
+}
+.profile__redact:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.profile__redact:disabled {
+  opacity: 40%;
 }
 
 .profile__exit {
@@ -76,7 +84,15 @@
   margin-top: 16px;
   text-align: center;
   text-decoration: none;
+  border: none;
+  background-color: transparent;
+  transition: opacity .5s;
 }
+
+.profile__exit:hover{
+  opacity: 0.6;
+  cursor: pointer;
+  }
 
 @media (max-width: 1279px) {
   .profile__container {
