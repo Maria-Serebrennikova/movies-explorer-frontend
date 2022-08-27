@@ -38,16 +38,25 @@ function App() {
     }
   }, [loggedIn]);
 
+  useEffect(() => {
+    const jwt = localStorage.getItem('jwt')
+    if (jwt) {
+      mainApi.getUserData()
+        .then(data => {
+          if (data) {
+            setLoggedIn(true)
+          }
+        })
+        .catch(err => { console.log(err); })
+    }
+  }, [navigate]);
+
   function handleRegistration({ name, password, email }) {
     mainApi
       .registration({ name, password, email })
       .then((res) => {
-        if (res) {
-          setIsInfoTooltipOpen(true);
-          setMessage({
-            successful: true,
-            message: "Вы успешно зарегистрировались!",
-          });
+        if (res._id) {
+          handleSignIn({ email, password });
         }
       })
       .catch((err) => {
@@ -111,6 +120,11 @@ function App() {
       .editProfile(info)
       .then((res) => {
         setCurrentUser(res);
+        setIsInfoTooltipOpen(true);
+        setMessage({
+          successful: true,
+          message: "Данные профиля успешно изменены.",
+        });
       })
       .catch((err) => {
         console.log(err);

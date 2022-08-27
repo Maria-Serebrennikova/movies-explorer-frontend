@@ -45,7 +45,7 @@ function SearchForm({
           <input
             type="checkbox"
             className="searchForm__switch-input"
-           // checked={ shortMovies }
+           checked={ shortMovies }
             onChange={ checkBoxClick }
           />
           <span className="searchForm__switch-slider round"></span>
