@@ -5,11 +5,12 @@ import AboutProject from '../AboutProject/AboutProject.js';
 import Techs from '../Techs/Techs.js';
 import AboutMe from '../AboutMe/AboutMe.js';
 import Portfolio from '../Portfolio/Portfolio.js';
-
+import InfoTooltip from '../InfoTooltip/InfoTooltip.js';
 
 function Main(props) {
   return (
    <main>
+  <InfoTooltip/>
    <Promo />
    <AboutProject />
    <Techs />

@@ -18,3 +18,12 @@
   line-height: 15px;
   color: #000000;
 }
+.movies__error{
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+}

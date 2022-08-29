@@ -1,86 +1,127 @@
-import cardImage from "../../images/cardImage.jpg";
-import cardImage2 from "../../images/cardImage2.jpg";
-import cardImage3 from "../../images/cardImage3.jpg";
-import cardImage4 from "../../images/cardImage4.jpg";
-import cardImage5 from "../../images/cardImage5.jpg";
-import cardImage6 from "../../images/cardImage6.jpg";
-import cardImage7 from "../../images/cardImage7.jpg";
-import cardImage8 from "../../images/cardImage8.jpg";
-import cardImage9 from "../../images/cardImage9.jpg";
-import cardImage10 from "../../images/cardImage10.jpg";
-import cardImage11 from "../../images/cardImage11.png";
-import cardImage12 from "../../images/cardImage12.jpg";
-
 import React from "react";
 import "../MoviesCardList/moviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList(props) {
+function MoviesCardList({
+  nothingFound = true,
+  moviesList = [],
+  onSaveClick = false,
+  onDeleteClick = false,
+  savedMoviesList = [],
+  savedMoviesPage = false,
+}) {
+  const [movieList, setMovieList] = React.useState([]);
+  const [cardsShowDetails, setCardsShowDetails] = React.useState({
+    total: 12,
+    extra: 3,
+  });
+  const [isMount, setIsMount] = React.useState(true);
+  const getScreenWidth = React.useCallback(() => window.innerWidth, []);
+  const [screenWidth, setScreenWidth] = React.useState(getScreenWidth());
+  const moviesCount = {
+    bigScreen: { width: 1280, cards: { total: 12, extra: 3 } },
+    normalScreen: { width: 768, cards: { total: 8, extra: 2 } },
+    smallScreen: { width: 480, cards: { total: 5, extra: 2 } },
+  };
+
+  React.useEffect(() => {
+    function handleScreenResize() {
+      setScreenWidth(getScreenWidth());
+    }
+    window.addEventListener("resize", resizeController, false);
+    let resizeTimer;
+    function resizeController() {
+      if (!resizeTimer) {
+        resizeTimer = setTimeout(() => {
+          resizeTimer = null;
+          handleScreenResize();
+        }, 1000);
+      }
+    }
+    return () => window.removeEventListener("resize", handleScreenResize);
+  }, [getScreenWidth]);
+
+    React.useEffect(() => {
+    if (screenWidth >= moviesCount.bigScreen.width) {
+      setCardsShowDetails(moviesCount.bigScreen.cards);
+    } else if (
+      screenWidth <= moviesCount.bigScreen.width &&
+      screenWidth > moviesCount.normalScreen.width
+    ) {
+      setCardsShowDetails(moviesCount.normalScreen.cards);
+    } else {
+      setCardsShowDetails(moviesCount.smallScreen.cards);
+    }
+    return () => setIsMount(false);
+  }, [
+    screenWidth,
+    isMount,
+  ]);
+
+  function handleClickElse() {
+    const start = movieList.length;
+    const end = start + cardsShowDetails.extra;
+    const additional = moviesList.length - start;
+
+    if (additional > 0) {
+      const newCards = moviesList.slice(start, end);
+      setMovieList([...movieList, ...newCards]);
+    }
+  }
+
+  React.useEffect(() => {
+    if (moviesList.length) {
+      const res = moviesList.filter((item, i) => i < cardsShowDetails.total);
+      setMovieList(res);
+    }
+  }, [
+    moviesList,
+    savedMoviesPage,
+    cardsShowDetails.total
+  ]);
+
+  function getSavedMovieCard(savedMoviesList, movie) {
+    return savedMoviesList.find(
+      (savedMovie) => savedMovie.movieId === movie.id
+    );
+  }
+
   return (
     <section className="moviesCardList">
-      <div className="moviesCardList__grid">
-        <MoviesCard
-          picture={cardImage}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage2}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage3}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage4}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage5}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage6}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage7}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage8}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage9}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage10}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage11}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-        <MoviesCard
-          picture={cardImage12}
-          title={"33 слова о дизайне"}
-          duration={"1ч 47м"}
-        />
-      </div>
-          </section>
+      <>
+        {nothingFound ? (
+          <p className="moviesCardList__notFound">Ничего не найдено.</p>
+        ) : (
+          <>
+            <div className="moviesCardList__grid">
+              {movieList.map((movie) => (
+                <MoviesCard
+                  saved={getSavedMovieCard(savedMoviesList, movie)}
+                  key={movie.id || movie._id}
+                  movie={movie}
+                  onSaveClick={onSaveClick}
+                  onDeleteClick={onDeleteClick}
+                  savedMoviesPage={savedMoviesPage}
+                />
+              ))}
+            </div>
+            {movieList.length >= 5 &&
+            movieList.length < moviesList.length ? (
+              <div className="moviesCardList__else">
+                <button
+                  className="moviesCardList__button"
+                  onClick={handleClickElse}
+                >
+                  Ещё
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+          </>
+        )}
+      </>
+    </section>
   );
 }
 

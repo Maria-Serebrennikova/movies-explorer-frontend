@@ -1,11 +1,12 @@
 import React from "react";
 import "../Navigation/navigation.css";
 import icon from "../../images/icon.svg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Navigation(props) {
+function Navigation() {
   const [showMenu, setShowMenu] = React.useState(false);
   const handleToggleMenu = () => setShowMenu(!showMenu);
+
   return (
     <nav className="navigation">
       <button
@@ -13,24 +14,30 @@ function Navigation(props) {
         type="button"
         onClick={handleToggleMenu}
       ></button>
-      <div className={`navigation__container ${ showMenu ? "navigation__container_visible" : "" }`}>
+      <div
+        className={`navigation__container ${
+          showMenu ? "navigation__container_visible" : ""
+        }`}
+      >
         <div className="navigation__sidebar">
-          <button className="navigation__close" type="button" onClick={handleToggleMenu}></button>
+          <button
+            className="navigation__close"
+            type="button"
+            onClick={handleToggleMenu}
+          ></button>
           <ul className="navigation__list">
             <li className="navigation__element navigation__element_type_main">
-              <Link
+              <NavLink
                 to="/"
-                className="navigation__link"
-                activeClassName="navigation__link_active"
+                className={({isActive}) => `navigation__link ${isActive ? 'navigation__link_active' :''}` }
               >
                 Главная
-              </Link>
+              </NavLink>
             </li>
             <li className="navigation__element">
               <NavLink
                 to="/movies"
-                className="navigation__link"
-                activeClassName="navigation__link_active"
+                className={({isActive}) => `navigation__link ${isActive ? 'navigation__link_active' :''}` }
               >
                 Фильмы
               </NavLink>
@@ -38,8 +45,7 @@ function Navigation(props) {
             <li className="navigation__element">
               <NavLink
                 to="/saved-movies"
-                className="navigation__link"
-                activeClassName="navigation__link_active"
+                className={({isActive}) => `navigation__link ${isActive ? 'navigation__link_active' :''}` }
               >
                 Сохранённые фильмы
               </NavLink>

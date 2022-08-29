@@ -13,7 +13,14 @@
   padding: 70px 70px 30px 70px;
   margin: 0;
 }
-
+.moviesCardList__notFound{
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+}
 .moviesCardList__else {
   display: flex;
   justify-content: center;
@@ -33,6 +40,10 @@
   font-size: 12px;
   line-height: 15px;
   color: #000000;
+}
+.moviesCardList__else {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1279px) {

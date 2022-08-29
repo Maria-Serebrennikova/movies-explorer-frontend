@@ -13,7 +13,7 @@ function Promo(props) {
         <div className="promo__subtitle">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </div>
-        <a href="to-learn-more" className="promo__button">Узнать больше</a>
+        <a href="https://github.com/Maria-Serebrennikova/movies-explorer-frontend" className="promo__button" target="blank">Узнать больше</a>
         </div>
         <img
           className="promo__image"

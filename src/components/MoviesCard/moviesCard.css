@@ -9,6 +9,7 @@ display: flex;
 justify-content: space-between;
 padding: 14px;
 gap: 26px;
+max-height: 68px;
 }
 
 .moviesCard__title{
@@ -18,6 +19,12 @@ font-weight: 500;
 font-size: 15px;
 line-height: 18px;
 color: #000000;
+max-width: 260px;
+box-sizing: border-box;
+margin: 0;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 }
 
 .moviesCard__duration{
@@ -36,14 +43,27 @@ background: none;
 width: 30px;
 height: 30px;
 border: none;
-background-image: url('../../images/flagActive.svg');
 background-position: center;
-background-repeat: no-repeat;
 margin-top: 19px;
+transition: opasity .5s;
+}
+.moviesCard__flag:hover{
+  opacity: 50%;
+  cursor: pointer;
+}
+.moviesCard__flag_type_active{
+background-image: url('../../images/flagActive.svg');
+}
+.moviesCard__flag_type_inactive{
+background-image: url('../../images/flagInactive.svg');
+}
+.moviesCard__flag_type_delete{
+  background-image: url('../../images/flagDelete.svg');
+
 }
 
 .moviesCard__image{
-  max-width: 100%;
+  width: 100%;
   height: 203px;
   object-fit: cover;
   object-position: cover;

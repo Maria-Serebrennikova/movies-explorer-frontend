@@ -125,6 +125,7 @@ text-decoration: none;
    }
 .navigation__element_type_main{
   display: flex;
+  text-decoration: none;
     }
 
 .navigation__link{
