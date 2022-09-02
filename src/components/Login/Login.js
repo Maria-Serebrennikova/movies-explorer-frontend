@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../images/logo.svg";
 import "../Login/login.css";
 import { Link } from "react-router-dom";
-import isEmail from "validator/es/lib/isEmail";
+import isEmail from "validator";
 
 function Login({ onSignIn, errorMessage }) {
   const [values, setValues] = useState({});
