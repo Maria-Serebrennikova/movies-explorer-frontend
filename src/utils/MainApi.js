@@ -105,6 +105,7 @@ export const mainApi = new MainApi({
   baseUrl: "http://api.maria.diploma.nomoredomains.xyz",
   //baseUrl: `${window.location.protocol}${process.env.REACT_APP_API_URL}`,
   headers: {
-    Accept: "application/json",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
   },
 });
