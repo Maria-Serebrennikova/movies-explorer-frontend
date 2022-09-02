@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../images/logo.svg";
 import "../Register/register.css";
 import { Link } from "react-router-dom";
-import isEmail from "validator";
+import validator from "validator";
 
 function Register({ onSignUp, errorMessage }) {
   const [values, setValues] = useState({});
@@ -11,7 +11,7 @@ function Register({ onSignUp, errorMessage }) {
 
   function handleChange(e) {
     if (e.target.name === "email") {
-      if (!isEmail(e.target.value)) {
+      if (!validator.isEmail(e.target.value)) {
         e.target.setCustomValidity("Некорректый адрес почты");
       } else {
         e.target.setCustomValidity("");
