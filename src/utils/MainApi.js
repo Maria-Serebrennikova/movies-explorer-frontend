@@ -102,7 +102,7 @@ deleteMovie(movieId){
 export const mainApi = new MainApi({
   // baseUrl: `${window.location.protocol}${process.env.REACT_APP_API_URL ||
   //    '//localhost:3001'}`,
-  baseUrl: "http://api.maria.diploma.nomoredomains.xyz",
+  baseUrl: "https://api.maria.diploma.nomoredomains.xyz",
   //baseUrl: `${window.location.protocol}${process.env.REACT_APP_API_URL}`,
   headers: {
     "Content-Type": "application/json",
